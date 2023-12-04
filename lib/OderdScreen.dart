@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'delivery_tab.dart';
+import 'DeliveryScreen.dart';
 
-class Orderd_Tab extends StatefulWidget {
-  const Orderd_Tab({super.key});
+class Orderd_Screen extends StatefulWidget {
+  const Orderd_Screen({super.key});
 
   @override
-  State<Orderd_Tab> createState() => _Orderd_TabState();
+  State<Orderd_Screen> createState() => _Orderd_ScreenState();
 }
 
-class _Orderd_TabState extends State<Orderd_Tab> {
+class _Orderd_ScreenState extends State<Orderd_Screen> {
   int Counter = 0;
 
   void incrementCounter() {
@@ -515,7 +515,7 @@ class _Orderd_TabState extends State<Orderd_Tab> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Delivery_Tab(),
+                          builder: (context) => Delivery_Screen(),
                         ),
                       );
                     },

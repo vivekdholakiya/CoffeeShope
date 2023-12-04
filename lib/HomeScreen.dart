@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'detail_item.dart';
-import 'oderd-tab.dart';
+import 'DetailitemScreen.dart';
 
-class Home_Page extends StatefulWidget {
-  const Home_Page({super.key});
+class Home_Screen extends StatefulWidget {
+  const Home_Screen({super.key});
 
   @override
-  State<Home_Page> createState() => _Home_PageState();
+  State<Home_Screen> createState() => _Home_ScreenState();
 }
 
-class _Home_PageState extends State<Home_Page> {
+class _Home_ScreenState extends State<Home_Screen> {
   TextEditingController searchcontroller = TextEditingController();
 
   List coffeeList = [
@@ -38,6 +37,18 @@ class _Home_PageState extends State<Home_Page> {
       "text": "with Out Milk",
       "price": "\$ 3.90"
     },
+    {
+      "pik": "assets/Rectangle 1706.png",
+      "name": "Cappuccino",
+      "text": "with Chocolate",
+      "price": "\$ 4.53"
+    },
+    {
+      "pik": "assets/Rectangle 1707.png",
+      "name": "Cappuccino",
+      "text": "with Chocolate",
+      "price": "\$ 4.53"
+    },
   ];
 
   @override
@@ -53,12 +64,7 @@ class _Home_PageState extends State<Home_Page> {
                   width: MediaQuery.of(context).size.width,
                   height: 350,
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Color(0xFF131313),
-                        Color(0xFF131313),
-                      ],
-                    ),
+                    color: Colors.black,
                   ),
                   child: Column(
                     children: [
@@ -119,6 +125,7 @@ class _Home_PageState extends State<Home_Page> {
                             padding: const EdgeInsets.all(25.0),
                             child: TextFormField(
                               controller: searchcontroller,
+                              style: TextStyle(color: Colors.white),
                               decoration: InputDecoration(
                                 hintText: "search",
                                 fillColor: Color(0xFF313131),
@@ -149,7 +156,7 @@ class _Home_PageState extends State<Home_Page> {
                 Stack(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 250, left: 8),
+                      padding: const EdgeInsets.only(top: 250, left: 16, right: 8),
                       child: Container(
                         width: 400,
                         height: 200,
@@ -160,13 +167,14 @@ class _Home_PageState extends State<Home_Page> {
                           borderRadius: BorderRadius.circular(20),
                           child: Image.asset(
                             "assets/image 8.png",
+                            width: MediaQuery.of(context).size.width,
                             fit: BoxFit.cover,
                           ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 260, left: 20),
+                      padding: const EdgeInsets.only(top: 260, left: 30),
                       child: Container(
                         height: 50,
                         width: 100,
@@ -185,7 +193,7 @@ class _Home_PageState extends State<Home_Page> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 330, left: 20),
+                      padding: const EdgeInsets.only(top: 330, left: 30),
                       child: Container(
                         height: 50,
                         width: 180,
@@ -202,7 +210,7 @@ class _Home_PageState extends State<Home_Page> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 390, left: 20),
+                      padding: const EdgeInsets.only(top: 390, left: 30),
                       child: Container(
                         height: 50,
                         width: 150,
@@ -236,11 +244,13 @@ class _Home_PageState extends State<Home_Page> {
                         color: Color(0xFFC67C4E),
                       ),
                       child: Center(
-                        child: Text("Cappuccino",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 20,
-                                color: Colors.white)),
+                        child: Text(
+                          "Cappuccino",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 20,
+                              color: Colors.white),
+                        ),
                       ),
                     ),
                     SizedBox(
@@ -313,29 +323,30 @@ class _Home_PageState extends State<Home_Page> {
                                 width: 70,
                                 height: 40,
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(20),
-                                    bottomRight: Radius.circular(20),
-
-                                  ),
-                                  color: Colors.grey
-                                ),
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(20),
+                                      bottomRight: Radius.circular(20),
+                                    ),
+                                    color: Colors.grey),
                                 child: Row(
                                   children: [
-                                    SizedBox(width: 5,),
-                                    Icon(Icons.star,color: Colors.yellow),
-                                    SizedBox(width: 4,),
-
-                                    Text("4.3",style: TextStyle(
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 18
-
-                                    ),)
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Icon(Icons.star, color: Colors.yellow),
+                                    SizedBox(
+                                      width: 4,
+                                    ),
+                                    Text(
+                                      "4.3",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 18),
+                                    )
                                   ],
                                 ),
                               ),
                             ],
-
                           ),
                           SizedBox(
                             height: 15,
@@ -388,7 +399,7 @@ class _Home_PageState extends State<Home_Page> {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => Detail_Items(),
+                                        builder: (context) => Detail_Screen(),
                                       ),
                                     );
                                   },

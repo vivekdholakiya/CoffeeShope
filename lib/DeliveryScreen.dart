@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 
-class Delivery_Tab extends StatefulWidget {
-  const Delivery_Tab({super.key});
+class Delivery_Screen extends StatefulWidget {
+  const Delivery_Screen({super.key});
 
   @override
-  State<Delivery_Tab> createState() => _Delivery_TabState();
+  State<Delivery_Screen> createState() => _Delivery_ScreenState();
 }
 
-class _Delivery_TabState extends State<Delivery_Tab> {
+class _Delivery_ScreenState extends State<Delivery_Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

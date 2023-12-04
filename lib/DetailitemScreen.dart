@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'oderd-tab.dart';
+import 'OderdScreen.dart';
 
-class Detail_Items extends StatefulWidget {
-  const Detail_Items({super.key});
+class Detail_Screen extends StatefulWidget {
+  const Detail_Screen({super.key});
 
   @override
-  State<Detail_Items> createState() => _Detail_ItemsState();
+  State<Detail_Screen> createState() => _Detail_ScreenState();
 }
 
-class _Detail_ItemsState extends State<Detail_Items> {
+class _Detail_ScreenState extends State<Detail_Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -287,7 +287,7 @@ class _Detail_ItemsState extends State<Detail_Items> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Orderd_Tab(),
+                          builder: (context) => Orderd_Screen(),
                         ),
                       );
                     },
